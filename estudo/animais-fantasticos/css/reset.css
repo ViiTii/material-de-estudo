@@ -1,0 +1,25 @@
+@import url(./menu.css);
+
+body,
+h1,
+h2,
+ul,
+li,
+p,
+dd,
+dt,
+dl {
+  margin: 0px;
+  padding: 0px;
+}
+
+form {
+  display: block;
+  margin-top: 0em;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+  background-color: #FAF6ED;
+}

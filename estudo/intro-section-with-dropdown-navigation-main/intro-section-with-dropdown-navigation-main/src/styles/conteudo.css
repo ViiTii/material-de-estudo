@@ -1,0 +1,19 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 187px;
+}
+
+h1{
+  font-weight: 900;
+  font-size: 70px;
+  color: black;
+}
+
+.img_conteudo{
+  display: flex;
+  width: 480px;
+  height: 640px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./treinoCondicoes2.js" defer></script>
+  <style>
+    body {
+      font: normal 15pt arial;
+      background-color: gray;
+    }
+
+    #resposta {
+      display: flex;
+      background-color: gainsboro;
+      max-width: 370px;
+      height: 30px;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Você pode votar?</h1>
+  <input type="number" id="age">
+  <input type="button" value="conferir" onclick="votar()">
+  <div id="resposta"></div>
+
+  <h1>Qual o dia e a hora?</h1>
+  <input type="button" value="conferir" onclick="cumprimentar()">
+  <div id="bd"></div>
+
+</body>
+
+</html>

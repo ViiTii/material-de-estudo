@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: aquamarine;
+      color: aliceblue;
+      font-size: 40px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>DOM</h1>
+  <p>treino</p>
+  <p>js</p>
+  <button id="title">clique aqui</button>
+
+  <script>
+    var p1 = document.getElementsByTagName('p')[0]
+    window.document.write(p1.innerText)
+    p1.style.color = 'black'
+    var b1 = document.getElementById('title')
+    b1.style.background = 'blue'
+    b1.innerText = 'estou treinando'
+  </script>
+
+</body>
+
+</html>
