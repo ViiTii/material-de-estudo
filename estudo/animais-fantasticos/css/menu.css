@@ -5,7 +5,7 @@
   background: #FB5;
 }
 
-.menu ul {
+.menu-options {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -19,7 +19,7 @@
   color: #222;
   text-decoration: none;
   font-family: 'IBM Plex Mono', monospace;
-  font-weight: 700;
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 0.875rem;
   letter-spacing: .1em;
@@ -32,11 +32,10 @@
   color: #222;
   text-decoration: none;
   font-family: 'IBM Plex Mono', monospace;
-  font-weight: 700;
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 0.875rem;
   letter-spacing: .1em;
-  ;
   border: none;
   background: transparent;
 }
@@ -71,6 +70,7 @@
   background: #E54;
   border: 2px solid #333;
   z-index: 200;
+  padding: 10px;
 }
 
 #dropdown-menu li {
@@ -100,38 +100,96 @@
   color: white;
 }
 
-.loginModal {
+
+.button-menu {
+  display: none;
+}
+
+@media(max-width: 700px) {
+  .menu {
+    grid-column: 1/5;
+    margin-top: 0;
+  }
+
+  .button-menu {
+    display: flex;
+    background: #222;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    align-items: center;
+    position: relative;
+    z-index: 300;
+  }
+
+  @keyframes show-right {
+    0% {
+      opacity: 0;
+      transform: translate3d(-30px, 0, 0);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .menu-options {
+    display: none;
+  }
+
+  .menu-options.active {
+    animation: show-right .3s forwards;
+    display: block;
+    position: absolute;
+    background: #FB5;
+    width: 160px;
+    z-index: 200;
+    top: 0;
+    padding: 60px 0 20px 0;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .2);
+  }
+
+  #dropdown-menu {
+    position: static;
+    border: none;
+    display: block;
+    animation: show-up .3s forwards;
+  }
+
+}
+
+#LoginModal {
   background: white;
-  width: 100%;
+  width: 80vw;
   max-width: 600px;
   padding: 40px;
   border: 10px solid #FB5;
   box-shadow: 0 0 0 10px white;
-  overflow: visible;
-  animation: AbrirLogin .3s forwards;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 6;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  /* max-width: 80%; */
 }
 
-@keyframes AbrirLogin {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, -30px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-
-}
-
-.loginModal label {
+#LoginModal label {
   font-family: 'IBM Plex Mono', monospace;
   display: block;
   font-weight: bold;
   margin: 1rem 0 0.5rem 0;
 }
 
-.loginModal input {
+#LoginModal input {
   width: 100%;
   padding: 0.7rem 0.5rem;
   box-sizing: border-box;
@@ -139,7 +197,7 @@
   border-radius: 0px;
 }
 
-.loginModal form button {
+#LoginModal form button {
   display: block;
   background: #E54;
   border: none;
@@ -152,7 +210,7 @@
   font-weight: bold;
 }
 
-.CloseLogin {
+#CloseLogin {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -163,4 +221,19 @@
   background: #E54 url(../img/fehcar.svg) no-repeat center center;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
   cursor: pointer;
+}
+
+#FadeLogin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+}
+
+#FadeLogin.hide,
+#LoginModal.hide {
+  opacity: 0;
 }
