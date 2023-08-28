@@ -21,7 +21,6 @@
       <ul class="menu-options">
 
         <li><a href="">ANIMAIS</a></li>
-
         <li id="dropdown">
           <a href="">SOBRE</a>
           <ul id="dropdown-menu">
@@ -31,30 +30,31 @@
             <li><a href="">INVESTIDORES</a></li>
           </ul>
         </li>
-
         <li><a href="">FAQ</a></li>
         <li><a href="">CONTATO</a></li>
 
         <li class="LOGIN">
-
-          <button id="AbrirLogin">LOGIN <span class="arrow-black"></span></button>
-          
-          <!-- <dialog class="loginModal" id="my-dialog">
-            <div id="modal">
-              <form action="">
-                <label for="email">Email</label>
-                <input type="text" for="email" id="email">
-                <label for="senha">Senha</label>
-                <input type="password" for="senha" id="senha">
-                <button type="submit">Entrar</button>
-              </form>
-              <button class="CloseLogin" id="CloseLogin"></button>
-            </div>
-          </dialog> -->
+          <button id="AbrirLogin" onclick="OpenLogin()">LOGIN <span class="arrow-black"></span></button>
         </li>
 
       </ul>
+
     </nav>
+
+    <div class="LoginModal-Container" id="loginModal-Container">
+
+      <div class="LoginModal">
+        <form action="">
+          <label for="email">Email</label>
+          <input type="text" for="email" id="email">
+          <label for="senha">Senha</label>
+          <input type="password" for="senha" id="senha">
+          <button type="submit">Entrar</button>
+        </form>
+        <button class="CloseLogin" id="CloseLogin" onclick="CloseModal"></button>
+      </div>
+
+    </div>
 
   </div>
 
