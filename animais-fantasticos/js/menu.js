@@ -1,7 +1,6 @@
-const get = document.querySelector(".menu-options")
 function change() {
+  const get = document.querySelector(".menu-options")
   get.classList.toggle("active")
-
 }
 document.getElementById('MenuButton').addEventListener('click', change)
 
