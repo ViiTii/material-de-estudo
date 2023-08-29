@@ -1,4 +1,4 @@
-function change() {
+ function change() {
   const get = document.querySelector(".menu-options")
   get.classList.toggle("active")
 }

@@ -1,0 +1,94 @@
+.title {
+  line-height: 1;
+  margin-bottom: 1rem;
+  grid-column: 1 / 4;
+  font-weight: 400;
+  font-size: 6rem;
+  font-family: 'Playfair Display SC', georgia;
+}
+
+.lista-animais {
+  height: 370px;
+  overflow-y: scroll;
+  grid-column: 2;
+  list-style: none;
+}
+
+.lista-animais li img {
+  display: block;
+  max-width: 100%;
+}
+
+.lista-animais li {
+  cursor: pointer;
+}
+
+.lista-animais::-webkit-scrollbar-thumb {
+  background: #FB5;
+  border-left: 4px solid #faf6ed;
+  border-right: 4px solid #faf6ed;
+}
+
+.lista-animais::-webkit-scrollbar {
+  width: 18px;
+}
+
+.descricao-container {
+  grid-column: 3;
+}
+
+@keyframes show-right {
+  0% {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.descricao-animais {
+  display: none;
+}
+
+.descricao-animais.ativo {
+  display: block;
+  animation: show-right .5s forwards;
+}
+
+.descricao-animais h2 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom: 1rem;
+  color: #E54;
+}
+
+.descricao-animais h2::before {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 10px;
+  margin-right: 10px;
+  background: #FB5;
+}
+
+.descricao-animais p {
+  font-family: Helvetica, Arial;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .lista-animais {
+    grid-column: 1;
+  }
+}
+
