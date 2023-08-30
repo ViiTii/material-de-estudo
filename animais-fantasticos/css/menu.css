@@ -107,7 +107,9 @@
 
 @media(max-width: 700px) {
   .menu {
-    grid-column: 1/5;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
     margin-top: 0;
   }
 
@@ -243,4 +245,5 @@
 .LoginModal-Container.open {
   display: flex;
   position: fixed;
+  z-index: 101;
 }

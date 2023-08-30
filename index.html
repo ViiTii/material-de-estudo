@@ -9,7 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Playfair+Display+SC:wght@400;700;900&display=swap" rel="stylesheet">
   <script src="./animais-fantasticos/js/menu.js" defer></script>
-  <script src="./animais-fantasticos/js/animais.js"></script>
+  <script src="./animais-fantasticos/js/animais.js" defer></script>
+  <script src="./animais-fantasticos/js/acordion.js" defer></script>
 </head>
 
 <body>
@@ -47,12 +48,12 @@
       <h1 class="title">Animais Fantásticos</h1>
 
       <ul class="lista-animais">
-        <li><img src="./animais-fantasticos/img/urso.jpg" id="urso" onclick="descricao()"></li>
-        <li><img src="./animais-fantasticos/img/leão.jpg" id="leao" onclick="descricao()"></li>
-        <li><img src="./animais-fantasticos/img/lobo.jpg" id="lobo" onclick="descricao()"></li>
-        <li><img src="./animais-fantasticos/img/macaco.jpg" id="macaco" onclick="descricao()"></li>
-        <li><img src="./animais-fantasticos/img/raposa.jpg" id="raposa" onclick="descricao()"></li>
-        <li><img src="./animais-fantasticos/img/esquilo.jpg" id="esquilo" onclick="descricao()"></li>
+        <li id="urso"><img src="./animais-fantasticos/img/urso.jpg"></li>
+        <li id="leao"><img src="./animais-fantasticos/img/leão.jpg"></li>
+        <li id="lobo"><img src="./animais-fantasticos/img/lobo.jpg"></li>
+        <li id="macaco"><img src="./animais-fantasticos/img/macaco.jpg"></li>
+        <li id="raposa"><img src="./animais-fantasticos/img/raposa.jpg"></li>
+        <li id="esquilo"><img src="./animais-fantasticos/img/esquilo.jpg"></li>
       </ul>
 
       <div class="descricao-container">
@@ -122,6 +123,41 @@
       </div>
 
     </section>
+
+    <section class="grid-section">
+
+      <h1 class="title">FAQ</h1>
+
+      <div class="acordion-faq" data-js="acordion">
+
+        <div class="acordion-faq-item">
+          <p data-acordion-header="1" class="acordion-header">Qual a idade dos animais?</p>
+          <p data-acordion-body="1" class="acordion-body ativo">As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
+        </div>
+
+        <div class="acordion-faq-item">
+          <span data-acordion-header="2" class="acordion-header">Eles são fantásticos?</span>
+          <p data-acordion-body="2" class="acordion-body">Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
+        </div>
+
+        <div class="acordion-faq-item">
+          <span data-acordion-header="3" class="acordion-header">Qual a diferença?</span>
+          <p data-acordion-body="3" class="acordion-body">As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
+        </div>
+
+        <div class="acordion-faq-item">
+          <span data-acordion-header="4" class="acordion-header">Como proteger?</span>
+          <p data-acordion-body="4" class="acordion-body">Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+
+
 
     <div class="LoginModal-Container" id="loginModal-Container">
       <div class="LoginModal">

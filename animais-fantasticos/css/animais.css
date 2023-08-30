@@ -85,10 +85,10 @@
 @media (max-width: 700px) {
   .title {
     font-size: 2.5rem;
+    margin-top: 3.5rem;
   }
 
   .lista-animais {
     grid-column: 1;
   }
 }
-
