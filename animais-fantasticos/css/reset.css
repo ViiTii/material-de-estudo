@@ -1,18 +1,16 @@
 @import url(./menu.css);
 @import url(./animais.css);
 @import url(./faq.css);
+@import url(./galeria.css);
 
-body,
-h1,
-h2,
-ul,
-li,
-p,
-dd,
-dt,
-dl {
+body,h1,h2,ul,li,p,dd,dt,dl {
   margin: 0px;
   padding: 0px;
+}
+
+img {
+  display: block;
+  width: 100%;
 }
 
 body {
