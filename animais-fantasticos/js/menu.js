@@ -13,4 +13,10 @@ function OpenLogin() {
       LoginModal.classList.remove('open')
     }
   })
+
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      LoginModal.classList.remove('open')
+    }
+  })
 }
