@@ -3,11 +3,16 @@
 @import url(./faq.css);
 @import url(./galeria.css);
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body,h1,h2,ul,li,p {
+body,
+h1,
+h2,
+ul,
+li,
+p {
   margin: 0px;
   padding: 0px;
 }
