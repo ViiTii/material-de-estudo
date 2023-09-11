@@ -75,7 +75,7 @@ function controlls() {
   };
 
   function tirarAtivo() {
-    const elementosAtivos = document.querySelectorAll('.ativo');
+    const elementosAtivos = document.querySelectorAll('.galeria .ativo');
     elementosAtivos.forEach((elemento) => {
       elemento.classList.remove('ativo');
     });

@@ -34,8 +34,6 @@
   transform: scale(1);
 }
 
-
-
 .slider {
   display: flex;
   transform: translate3d(841.5px, 0px, 0px);
